@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     },
 
     jshint: {
-      all: ['server.js', 'script.js'],
+      all: ['server.js', 'app/**/*.js'],
       options: {
         jshintrc: true,
         globals: {
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         files: {
-          "styles/main.css": "styles/main.scss"
+          "app/styles/main.css": "app/styles/main.scss"
         },
         options: {
           includePaths: ['styles/'],
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
         }
       },
       css: {
-        files: ['styles/*.scss'],
+        files: ['app/styles/*.scss'],
         options: {
           livereload: true
         },
