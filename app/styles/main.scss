@@ -2,28 +2,50 @@
 /* Global styles */
 
 $bg-img: url(../assets/images/lake.jpg);
+$p-color: #3E7378; // primary color
+$white: #fff;
 
 html,
 body {
   height: 100%;
   width: 100%;
+  letter-spacing: 1px;
+  font-weight: 200;
 }
 
+h1, h2, h3 {
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+h4 {
+  letter-spacing: 2px;
+  font-weight: 200;
+}
 a, a:visited {
   color: #333;
 }
 
 a:hover {
-  color: #777;
+  color: $p-color;
   text-decoration: none;
 }
 
 /* Side Menu */
 
-.btn {
-  background: #fff;
-  opacity: 0.5;
+.btn-primary {
+  background: $white;
+  border-color: $white;
+  opacity: 0.4;
 }
+
+.btn-primary:hover {
+  background: $white;
+  border-color: $white;
+  color: #333;
+  opacity: 0.8;
+}
+
 #sidebar-wrapper {
   margin-right: -250px;
   right: 0;
@@ -61,7 +83,7 @@ a:hover {
 }
 
 .sidebar-nav li a:hover {
-  color: #fff;
+  color: $white;
   text-decoration: none;
 }
 
@@ -77,11 +99,11 @@ a:hover {
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #999999;
+  color: #999;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
+  color: $white;
   background: none;
 }
 
@@ -112,7 +134,7 @@ a:hover {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  color: white;
+  color: $white;
   font-style: Helvetica, sans-serif;
   letter-spacing: 3px;
   font-weight: 200;
@@ -142,25 +164,32 @@ a:hover {
 }
 
 #down {
-  color: #fff;
+  color: $white;
   opacity: 0.4;
 }
 
 #down:hover {
-  color: #333;
+  opacity: 0.8;
 }
 /* Intro */
 
 .intro {
+  display: table;
   padding: 50px 0;
+  height: 100%;
+  width: 100%;
 }
 
+.content-center {
+  display: table-cell;
+  vertical-align: middle;
+}
 /* Skills */
 
 .skills {
-  background: #7fbbda;
+  background: $p-color;
   padding: 50px 0;
-  color: #ffffff;
+  color: $white;
 }
 
 .skills-item {
@@ -182,7 +211,7 @@ i.skills-icon {
 /* Callout */
 
 .callout {
-  color: #ffffff;
+  color: $white;
   display: table;
   height: 400px;
   width: 100%;
@@ -211,7 +240,7 @@ i.skills-icon {
 /* Call to Action */
 
 .call-to-action {
-  color: #ffffff;
+  color: $white;
   background: #0a5175;
   padding: 50px 0;
 }
@@ -247,7 +276,7 @@ i.scroll {
 }
 
 i.scroll:hover {
-  color: #0a5175;
+  color: $p-color;
 }
 /* Responsive */
 
