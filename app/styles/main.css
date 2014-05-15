@@ -199,12 +199,9 @@ i.skills-icon {
   background: #0a5175;
   padding: 50px 0; }
 
-.call-to-action .btn {
-  margin: 10px; }
-
 /* Contact */
-.map {
-  height: 75%; }
+#email {
+  padding-left: 5px; }
 
 /* Footer */
 footer {

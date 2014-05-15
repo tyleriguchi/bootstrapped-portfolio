@@ -205,7 +205,7 @@ i.skills-icon {
   width: 140px;
   height: 140px;
   line-height: 136px;
-  vertical-align: middle; 
+  vertical-align: middle;
   text-align: center;
 }
 
@@ -216,7 +216,7 @@ i.skills-icon {
   display: table;
   height: 400px;
   width: 100%;
-  background: url(../assets/images/callout.jpg) no-repeat center center fixed; 
+  background: url(../assets/images/callout.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -246,16 +246,11 @@ i.skills-icon {
   padding: 50px 0;
 }
 
-.call-to-action .btn {
-  margin: 10px;
-}
-
 /* Contact */
 
-.map {
-  height: 75%;
+#email {
+  padding-left: 5px;
 }
-
 /* Footer */
 
 footer {
@@ -283,7 +278,7 @@ i.scroll:hover {
 /* Responsive */
 
 @media (max-width: 768px) {
-	
+
   .header {
   background-image: $bg-img;
   background-repeat: no-repeat;
@@ -292,7 +287,7 @@ i.scroll:hover {
   }
 
   .callout {
-	background: url(../assets/images/callout.jpg) no-repeat center center scroll; 
+	background: url(../assets/images/callout.jpg) no-repeat center center scroll;
   }
 
 }
