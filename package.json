@@ -1,7 +1,7 @@
 {
-  "name": "basic",
+  "name": "Portfolio",
   "version": "0.0.0",
-  "description": "Basic boilerplate for small webpages",
+  "description": "Portfolio site",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
