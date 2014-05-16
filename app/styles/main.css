@@ -25,6 +25,7 @@ a:hover {
 .btn-primary {
   background: #fff;
   border-color: #fff;
+  color: #333;
   opacity: 0.4; }
 
 .btn-primary:hover {
