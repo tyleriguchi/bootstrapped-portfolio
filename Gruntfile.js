@@ -5,17 +5,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-processhtml');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    env: {
-      dev: {
-        NODE_ENV: 'development'
-      },
-      test: {
-        NODE_ENV: 'test'
-      }
-    },
 
     jshint: {
       all: ['server.js'],
@@ -44,6 +40,12 @@ module.exports = function(grunt) {
     },
 
     sass: {
+      prod: {
+        files: {
+          "app/styles/main.css": "app/styles/main.scss"
+        }
+      },
+
       dev: {
         files: {
           "app/styles/main.css": "app/styles/main.scss"
@@ -67,10 +69,56 @@ module.exports = function(grunt) {
         options: {
           livereload: true
         },
-        tasks: ['sass']
+        tasks: ['sass:dev']
+      }
+    },
+
+    clean: {
+      build: ['build'],
+      dev: {
+        src: ['build/**/*']
+      },
+      prod: ['dist']
+    },
+
+    copy: {
+      prod: {
+        expand: true,
+        cwd: 'app',
+        src: ['assets/**/*', 'js/*', 'styles/**/*.css', 'server.js'],
+        dest: 'dist/',
+        flatten: false,
+        filter: 'isFile'
+      },
+      dev: {
+        expand: true,
+        cwd: 'app',
+        src: ['assets/**/*', 'js/*', 'styles/**/*.css'],
+        dest: 'build/',
+        flatten: false,
+        filter: 'isFile'
+      }
+    },
+
+    uncss: {
+      prod: {
+        files: {
+          'dist/app/styles/tidy.css': ['index.html']
+        }
+      }
+    },
+
+    processhtml: {
+      prod: {
+        files: {
+          'dist/index.html': ['index.html']
+        }
       }
     }
   });
-
-  grunt.registerTask('default', ['jshint', 'express:dev', 'sass', 'watch']);
+  grunt.registerTask('minifycss', ['uncss:prod', 'processhtml:prod']);
+  grunt.registerTask('build:dev', ['clean:dev', 'sass:dev', 'copy:dev']);
+  grunt.registerTask('build:prod', ['clean:prod', 'sass:prod', 'copy:prod']);
+  grunt.registerTask('prod', ['build:prod', 'minifycss']);
+  grunt.registerTask('default', ['build:dev', 'jshint', 'express:dev', 'watch']);
 };

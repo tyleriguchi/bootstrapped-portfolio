@@ -28,7 +28,7 @@ a:hover {
   color: #333;
   opacity: 0.4; }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:active {
   background: #fff;
   border-color: #fff;
   color: #333;
@@ -178,7 +178,7 @@ i.skills-icon {
   display: table;
   height: 400px;
   width: 100%;
-  background: url(../assets/images/forest.png) no-repeat center center fixed;
+  background: url(../assets/images/forest.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -235,6 +235,4 @@ i.scroll:hover {
     background-position: center center;
     background-attachment: scroll; }
   .callout {
-    background: url(../assets/images/forest.png) no-repeat center center scroll; } }
-
-/*# sourceMappingURL=main.css.map */
+    background: url(../assets/images/forest.jpg) no-repeat center center scroll; } }

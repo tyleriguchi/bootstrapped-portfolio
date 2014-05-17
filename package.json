@@ -4,18 +4,24 @@
   "description": "Portfolio site",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "echo postinstall time; ./node_modules/grunt/bin/grunt prod"
+
   },
   "author": "Tyler Iguchi",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.0.0"
+    "express": "^4.0.0",
+    "grunt": "^0.4.4"
   },
   "devDependencies": {
-    "grunt": "^0.4.4",
     "grunt-sass": "^0.12.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-express-server": "^0.4.13",
-    "grunt-contrib-jshint": "^0.10.0"
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-uncss": "^0.3.3",
+    "grunt-processhtml": "^0.3.3"
   }
 }
