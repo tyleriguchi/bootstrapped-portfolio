@@ -5,13 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "echo postinstall time; ./node_modules/grunt/bin/grunt prod"
+    "postinstall": "echo postinstall time; sudo ./node_modules/grunt/bin/grunt prod"
 
   },
   "author": "Tyler Iguchi",
   "license": "ISC",
   "dependencies": {
-    "node": "0.10.25",
     "express": "^4.0.0",
     "grunt": "^0.4.4"
   },
