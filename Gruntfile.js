@@ -85,7 +85,7 @@ module.exports = function(grunt) {
       prod: {
         expand: true,
         cwd: 'app',
-        src: ['assets/**/*', 'js/*', 'styles/**/*.css', 'server.js'],
+        src: ['assets/**/*', 'js/*', 'styles/**/*.css', '../server.js'],
         dest: 'dist/',
         flatten: false,
         filter: 'isFile'
