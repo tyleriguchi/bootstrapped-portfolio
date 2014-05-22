@@ -21,6 +21,7 @@ h1, h2, h3 {
 h4 {
   letter-spacing: 2px;
   font-weight: 200;
+  font-size: 1.38em;
 }
 
 a, a:visited {
@@ -194,8 +195,11 @@ a:hover {
   color: $white;
 }
 
+.skills-row {
+  padding-top: 20px;
+}
 .skills-item {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 i.skills-icon {
